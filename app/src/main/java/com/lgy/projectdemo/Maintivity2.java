@@ -25,6 +25,8 @@ public class Maintivity2 extends AppCompatActivity {
 
     private TextView tvSvRv;
 
+    private TextView tvPlayBack;
+
     private ComTestAdapter testAdapter;
 
     private List<TestBean> mDataList = new ArrayList();
@@ -37,6 +39,7 @@ public class Maintivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         rvTest = (RecyclerView) findViewById(R.id.rv_test);
         tvSvRv = (TextView) findViewById(R.id.tv_sv_rv);
+        tvPlayBack = (TextView) findViewById(R.id.tv_playback);
         for (int i = 0; i < 2; i++) {
             TestBean testBean = new TestBean();
             mItemDataList.clear();
@@ -55,6 +58,12 @@ public class Maintivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Maintivity2.this, ScroOrRecyActivity.class));
+            }
+        });
+        tvPlayBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              //  startActivity(new Intent(Maintivity2.this, PlayBackDetailActivity.class));
             }
         });
 

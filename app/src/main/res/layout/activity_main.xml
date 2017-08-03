@@ -12,6 +12,11 @@
         android:gravity="center"
         android:text="看看ScrollView嵌套RecycleView" />
 
+    <TextView
+        android:id="@+id/tv_playback"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_test"
         android:layout_width="match_parent"
